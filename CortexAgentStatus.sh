@@ -88,6 +88,9 @@ fi
 ###############################################################################
 # Determine overall health
 ###############################################################################
+# The array preserves every detected problem in order so Jamf can report a
+# single summary. A single issue is displayed as-is; multiple problems are
+# joined into a human-readable comma-separated list.
 
 if (( ${#ISSUES[@]} == 0 )); then
     RESULT="Healthy"
